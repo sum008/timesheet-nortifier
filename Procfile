@@ -1,1 +1,1 @@
-web: python sendMail.py 
+worker: python sendMail.py 
