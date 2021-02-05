@@ -24,3 +24,4 @@ while True:
     for id in mail_list:
         server.sendmail("kums519@gmail.com", id, message)
         print("done sending notification.")
+        time.sleep(2)
