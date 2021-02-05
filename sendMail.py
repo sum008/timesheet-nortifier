@@ -14,14 +14,20 @@ Good day!
 import smtplib
 import time
 
-hr=time.localtime()[3]
-day=time.localtime()[6]
 server = smtplib.SMTP_SSL("smtp.gmail.com",465)
 server.login("kums519@gmail.com","Google@567")
 mail_list=["sk4641230@gmail.com","ksum257@gmail.com"]
-
+ 
 while True:
-    for id in mail_list:
-        server.sendmail("kums519@gmail.com", id, message)
+    hr=time.localtime()[3]
+    mint=time.localtime()[4]
+    sec=time.localtime()[5]
+    day=time.localtime()[6]
+    print("{hr} : {min} : {sec}".format(hr=hr,min=mint,sec=sec))
+    while hr==17 and mint==21 and sec<10:
+        for mail in mail_list:
+            server.sendmail("kums519@gmail.com", mail, message)
         print("done sending notification.")
-        time.sleep(2)
+        time.sleep(10)
+        break
+    time.sleep(1)
