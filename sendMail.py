@@ -19,7 +19,8 @@ day=time.localtime()[6]
 server = smtplib.SMTP_SSL("smtp.gmail.com",465)
 server.login("kums519@gmail.com","Google@567")
 mail_list=["sk4641230@gmail.com","ksum257@gmail.com"]
-for id in mail_list:
-    server.sendmail("kums519@gmail.com", id, message)
-server.close()
-print("done.")
+
+while True:
+    for id in mail_list:
+        server.sendmail("kums519@gmail.com", id, message)
+        print("done sending notification.")
