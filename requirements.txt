@@ -1,2 +1,1 @@
-IMAPClient==2.1.0
 secure-smtplib==0.1.1
