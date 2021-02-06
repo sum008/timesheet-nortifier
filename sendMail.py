@@ -25,7 +25,7 @@ while True:
     day=time.localtime()[6]
     print("{hr} : {min} : {sec}".format(hr=hr,min=mint,sec=sec))
     #Synchronized with london time in 24hr format
-    while hr==1 and mint==30 and sec<10:
+    while day <=4 and hr==5 and mint==30 and sec<10:
         for mail in mail_list:
             server.sendmail("kums519@gmail.com", mail, message)
         print("done sending notification.")
